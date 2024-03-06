@@ -2,6 +2,8 @@ const { Users, Reactions, Thoughts } = require('../models');
 
 module.exports = {
 
+
+    // get all users 
     async getUsers(req, res) {
         try {
             const users = await Users.find().populate('users');
@@ -13,15 +15,18 @@ module.exports = {
 
     },
 
-    async getThoughts(req, res) {
+    // get single user by id
+    async getSingleUser(req, res) {
         try {
-            const thoughts = await Thoughts.find().populate('thoughts');
-            res.json(thoughts);
+            const users = await Users.findOne({ _id: req.params.userId })
+            .populate('users'); 
+            res.json(users);
         } catch (err) {
             res.status(500).json(err);
         }
-    },
+    }, 
 
+    // get all user reactions 
     async getReactions(req, res) {
 
         try {
@@ -34,24 +39,22 @@ module.exports = {
 
     }, 
 
-    async getSingleUser(req, res) {
-        try {
-            const users = await Users.findOne({ _id: req.params.userId })
-            .populate('users'); 
-            res.json(users);
+    // create a new user
+    async createUser(req, res) {
+        try{ 
+            const dbUserData = await User.create(req.body); 
+            res.json(dbUserData);
         } catch (err) {
             res.status(500).json(err);
         }
     }, 
 
-    async getSingleThought(req, res) {
-        try {
-            const thoughts = await Thoughts.findOne({ _id: req.params.thoughtId }); 
-            res.json(thoughts);
-        } catch (err) {
-            res.status(500).json(err);
-        }
-    }, 
+    
+
+
+    
+
+
 
     
 
