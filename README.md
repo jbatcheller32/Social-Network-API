@@ -1,5 +1,5 @@
 # Social-Network-API
-<<<<<<< HEAD
+
 Welcome to the Social Network API! This API provides endpoints to manage users and their associated thoughts and friends within a social network platform.
 
 
