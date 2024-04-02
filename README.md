@@ -1,5 +1,5 @@
 # Social-Network-API
-<<<<<<< HEAD
+
 Welcome to the Social Network API! This API provides endpoints to manage users and their associated thoughts and friends within a social network platform.
 
 
@@ -102,24 +102,10 @@ Contributions are welcome! If you find any issues or have suggestions for improv
 
 This project is licensed under the MIT License.
 
-# links
-
-
-=======
-
-# Description
-This app is a social network API that allows users to share their thoughts, react to friends’ thoughts, and create a friend list. This app uses mongodb and express for the dependencies. You can use insomina to test 
-the API calls
-
-# Usage 
-
-It uses Express.js for routing, a MongoDB database, and the Mongoose ODM. 
-
-# future development
-
-Get all the API routes running correctly
 
 # Link
 
 https://github.com/jbatcheller32/Social-Network-API
->>>>>>> f3c3b9e482b1fca3f471765ce9cf01f54e3df2d8
+
+https://drive.google.com/file/d/1rbGRfb8fEqotRC75SQHvzRDlEyYdCKOd/view
+
